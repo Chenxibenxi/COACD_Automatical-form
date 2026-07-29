@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# 工具产出(表格/图/中间碰撞片)默认不入库
+coacd_autofit_out/
+*.png
+!docs/*.png

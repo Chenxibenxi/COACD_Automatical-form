@@ -1,0 +1,6 @@
+coacd
+trimesh
+numpy
+matplotlib
+# 可选：合并多连通分量实体(trimesh.boolean.union engine="manifold")时需要
+manifold3d

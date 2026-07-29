@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coacd-autofit"
+version = "0.1.0"
+description = "给视觉网格自动制表(CoACD threshold↔片数↔真实精度) + 按精度要求生成碰撞模型"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "coacd",
+    "trimesh",
+    "numpy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+# manifold3d 供 trimesh.boolean.union(engine="manifold") 合并多连通分量实体用
+solid = ["manifold3d"]
+
+[project.scripts]
+coacd-autofit = "coacd_autofit.cli:main"
+
+[tool.setuptools]
+packages = ["coacd_autofit"]
